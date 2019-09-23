@@ -15,7 +15,8 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 Day1_lesson1_keras_2_layer_alg.pdf
 
-![Alt text](./Day1_lesson1_keras_2_layer_alg.pdf "")
+<a href="./Day1_lesson1_keras_2_layer_alg.pdf"></a>
+
 
 
 
