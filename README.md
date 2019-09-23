@@ -13,8 +13,8 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 ## PDF Hardcopies:
 
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson1_keras_2_layer_alg.pdf
 
-<a target='_blank' href={require('Day1_lesson1_keras_2_layer_alg.pdf')}>PDF Doc</a>
 
 
 
