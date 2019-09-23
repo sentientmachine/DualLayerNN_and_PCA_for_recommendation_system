@@ -13,9 +13,8 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 ## PDF Hardcopies:
 
-Day1_lesson1_keras_2_layer_alg.pdf
 
-<a href="./Day1_lesson1_keras_2_layer_alg.pdf"></a>
+<a target='_blank' href={require('Day1_lesson1_keras_2_layer_alg.pdf')}>PDF Doc</a>
 
 
 
