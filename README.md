@@ -119,12 +119,31 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
     output = model.fit( [input_x, input_y], output_z, epochs=10,
                    validation_split=0.2, shuffle=True, verbose=1)
 
-
     #Step 4: Evaluate Model Performance
-    #broken because it's moved from jupy
     from recoflow.vis import MetricsVis
-    MetricsVis(output.history)
+    df = pd.DataFrame(output.history)
+    df.reset_index()
+    df["batch"] = df.index + 1
+    df = df.melt("batch", var_name="name")
+    df["val"] = df.name.str.startswith("val")
+    df["type"] = df["val"]
+    df["metrics"] = df["val"]
+    df.loc[df.val == False, "type"] = "training"
+    df.loc[df.val == True, "type"] = "validation"
+    df.loc[df.val == False, "metrics"] = df.name
+    df.loc[df.val == True, "metrics"] = df.name.str.split("val_", expand=True)[1]
+    df = df.drop(["name", "val"], axis=1)
+    base = alt.Chart().encode(
+        x = "batch:Q",
+        y = "value:Q",
+        color = "type"
+    ).properties(width = 300, height = 300)
+    layers = base.mark_circle(size = 50).encode(tooltip = ["batch", "value"]) + base.mark_line()
+    chart = layers.facet(column='metrics:N', data=df).resolve_scale(y='independent')
+    chart.save('eval_model_performance.png')
 
+
+![Alt text](./eval_model_performance.png?raw=true "training progress")
 
     #Step 5: Make a Prediction
     Z_pred = model.predict([input_x, input_y]).reshape(200,200)
