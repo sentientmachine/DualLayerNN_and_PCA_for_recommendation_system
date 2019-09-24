@@ -44,3 +44,94 @@ ax.set_zlabel('Z')
 #save out the image
 plt.savefig('saddle.png')
 
+
+#so that's the target now train the model:
+
+#Using Deep Learning
+#Step 0: Load Libraries
+
+from keras.models import Model
+from keras.layers import Dense, Input, Concatenate
+
+
+#Step 1: Design the Learning Architecture, model definition
+def deep_learning_model():
+
+    # Get the input
+    x_input = Input(shape=[1], name="X")
+    y_input = Input(shape=[1], name="Y")
+
+    # Concatenate the input
+    xy_input = Concatenate(name="Concat")([x_input, y_input])
+
+    # Create Transform functions
+    Dense_1 = Dense(32, activation="relu", name="Dense1")(xy_input)
+    Dense_2 = Dense(4, activation="relu", name="Dense2")(Dense_1)
+
+    # Create the Output
+    z_output = Dense(1, name="Z")(Dense_2)
+
+    # Create the Model
+    model = Model([x_input, y_input], z_output, name="Saddle")
+
+    # Compile the Model
+    model.compile(loss="mean_squared_error", optimizer="sgd")
+
+    return model
+
+model = deep_learning_model()
+model.summary()
+
+
+#is this broke?
+#from keras.utils import plot_model
+#plot_model(model, show_layer_names=True, show_shapes=True)
+
+#Step 2 learn the weights:
+input_x = X.reshape(-1)
+input_y = Y.reshape(-1)
+output_z = Z.reshape(-1)
+X.shape, Y.shape, Z.shape
+
+input_x.shape, input_y.shape, output_z.shape
+
+
+df = pd.DataFrame({"X": input_x, "Y": input_y, "Z": output_z})
+df.head()
+
+#fit the model
+output = model.fit( [input_x, input_y], output_z, epochs=10,
+               validation_split=0.2, shuffle=True, verbose=1)
+
+
+#Step 4: Evaluate Model Performance
+#broken because it's moved from jupy
+from recoflow.vis import MetricsVis
+MetricsVis(output.history)
+
+
+#Step 5: Make a Prediction
+Z_pred = model.predict([input_x, input_y]).reshape(200,200)
+
+#prepare and save the image
+fig = plt.figure(figsize=(8,8))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, Y, Z_pred, color='y')
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z_pred')
+
+#save out the image
+plt.savefig('saddle_learned.png')
+
+
+
+#Step 6: Keep going
+#Experimentation
+
+#Change the number of layers: 2 -> 3
+#Change the number of learning units in the layer: 32, 4 -> 16,2
+#Change the activation function from relu to linear
+
+
+

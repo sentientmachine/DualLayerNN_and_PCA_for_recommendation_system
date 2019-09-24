@@ -12,6 +12,7 @@
 #pip3 install altair
 #pip3 install recoflow
 #pip3 install tensorflow
+#pip3 install pydot
 
 #then:
 
