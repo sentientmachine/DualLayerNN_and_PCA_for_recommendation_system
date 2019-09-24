@@ -13,6 +13,10 @@
 #pip3 install recoflow
 #pip3 install tensorflow
 #pip3 install pydot
+#pip3 install selenium
+#pip3 install chromedriver
+#brew cask install chromedriver
+
 
 #then:
 

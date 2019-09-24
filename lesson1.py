@@ -44,7 +44,6 @@ ax.set_zlabel('Z')
 #save out the image
 plt.savefig('saddle.png')
 
-
 #so that's the target now train the model:
 
 #Using Deep Learning
@@ -82,7 +81,6 @@ def deep_learning_model():
 model = deep_learning_model()
 model.summary()
 
-
 #is this broke?
 #from keras.utils import plot_model
 #plot_model(model, show_layer_names=True, show_shapes=True)
@@ -95,7 +93,6 @@ X.shape, Y.shape, Z.shape
 
 input_x.shape, input_y.shape, output_z.shape
 
-
 df = pd.DataFrame({"X": input_x, "Y": input_y, "Z": output_z})
 df.head()
 
@@ -103,11 +100,28 @@ df.head()
 output = model.fit( [input_x, input_y], output_z, epochs=10,
                validation_split=0.2, shuffle=True, verbose=1)
 
-
 #Step 4: Evaluate Model Performance
-#broken because it's moved from jupy
 from recoflow.vis import MetricsVis
-MetricsVis(output.history)
+df = pd.DataFrame(output.history)
+df.reset_index()
+df["batch"] = df.index + 1
+df = df.melt("batch", var_name="name")
+df["val"] = df.name.str.startswith("val")
+df["type"] = df["val"]
+df["metrics"] = df["val"]
+df.loc[df.val == False, "type"] = "training"
+df.loc[df.val == True, "type"] = "validation"
+df.loc[df.val == False, "metrics"] = df.name
+df.loc[df.val == True, "metrics"] = df.name.str.split("val_", expand=True)[1]
+df = df.drop(["name", "val"], axis=1)
+base = alt.Chart().encode(
+    x = "batch:Q",
+    y = "value:Q",
+    color = "type"
+).properties(width = 300, height = 300)
+layers = base.mark_circle(size = 50).encode(tooltip = ["batch", "value"]) + base.mark_line()
+chart = layers.facet(column='metrics:N', data=df).resolve_scale(y='independent')
+chart.save('eval_model_performance.png')
 
 
 #Step 5: Make a Prediction
