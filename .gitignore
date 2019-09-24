@@ -1,0 +1,94 @@
+
+#Never store password files or anything like it.  Career ending stuff broseph.
+.pgpass
+.my.cnf
+any_password_file
+
+#using dbext in vim, or mysql on the terminal sometimes sharts this 'Result' file lol
+Result
+
+#don't store virtualenv files
+.env
+.venv
+
+#pickle files are variable type/data dumps, don't commit them
+*.pckl
+
+#Never store the .git directory or anything underneath it, it usually doesn't, but this forces
+.git/
+
+#Never store a brobdingnagian target directory that maven makes, or anything underneath that:
+target/
+
+#vi things, don't commit .swp files, tag files, view files
+*.swp
+tags
+*.view
+
+#Macbook sharts a .DS_Store on file which is for finder, don't commit that.
+.DS_Store
+._.DS_Store
+
+#Huge video, gif csv data files should not be committed
+*.mp4
+*.pdf
+*.gif
+*.csv
+
+#image files are generally not allowed, sometimes, if they're small and light
+*.png
+*.jpg
+*.jpeg
+*.tiff
+
+#on gentoo, .cast files are halfway ascii files that make images.  don't commit
+*.cast
+
+#Java Essentials, never store class files, ignore jar war ear Package Files
+*.class
+*.jar
+*.war
+*.ear
+
+#Python things, ignore any file ending in .pyc pyo or pyd 
+*.py[cod]
+
+#python sometimes sharts these reflection based files on disk, don't commit those
+__pycache__/
+*$py.class
+
+#ignore any C extensions
+*.so
+
+
+
+# C/C++ things:
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+${0}
+
