@@ -352,7 +352,7 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 
     plt.savefig('lesson4_movie_titles.png')
 
-# Top Ranked Titles
+# Top Ranked Titles for our User.
 
 ![Alt text](./lesson4_movie_titles.png?raw=true "training progress")
 
