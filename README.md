@@ -170,7 +170,7 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 ![Alt text](./saddle_learned.png?raw=true "learned saddle 3d shape")
 
-# Day 1 Lesson 2 doing PCA as matrix factorization to generalize
+# Day 1 Lesson 1 - doing PCA Principal Components Analysis via matrix factorization to maximize variance and minimize set size, for generalization.
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_pca_matrix_factorization.pdf
 
@@ -184,9 +184,7 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/tensorflow_tutorial_basic_text_classification.pdf
 
 
-
-
-# Day2 Lesson 4 deep models for ranking
+# Day2 deep models for ranking
 
 ### ipynb notebook flattened to PDF:
 
@@ -390,23 +388,23 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 
 
 
-# Lesson 2:
+# PCA reduction, teacher's ipynb flattened to PDF
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_matrix_pca_reduction.pdf
 
-# Lesson 3:
+# Matrix Reduction and Predict, my ipynb
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson3_matrix_reduction_and_predict.pdf
 
-# Lesson 4:
+# Day 2 deep models
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson4_deepmodels_eric.pdf
 
-# Lesson 6:
+# Day 2 explicit and implicit feedback, how to handle a user's non-interaction with something as negative or neutral.
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson6_implicit-feedback.pdf
 
-# Lesson 7: 
+# Matrix Factorization teacher's ipynb flattened to PDF:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson7_matrix_factorization.pdf
 
