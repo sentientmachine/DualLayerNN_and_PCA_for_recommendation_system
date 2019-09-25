@@ -10,6 +10,8 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 
 # Reproduction of Lesson1 work:
 
+Learn a Noisy Saddle Function => `z=2*x*x-3*y*y+5+e`
+
 Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 ## Data has been downloaded in this git repo as:
@@ -387,6 +389,17 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson3_matrix_reduction_and_predict.pdf
 
 
+# Lesson 7: 
+
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson7_matrix_factorization.pdf
+
+    code
+
+Explore these:
+
+Image processing:
+
+https://matplotlib.org/3.1.1/tutorials/introductory/images.html
 
 
 
