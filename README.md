@@ -174,6 +174,8 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_pca_matrix_factorization.pdf
 
+![Alt text](./pca_compression_by_matrix_factorization.png?raw=true "Vertical and horizontal slice is the two factors of the original matrix.  This is the pca reduction brain.")
+
 
 # Tensorflow Tutorial basic Text Classification:
 
