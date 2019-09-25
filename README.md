@@ -1,17 +1,24 @@
 # DualLayerNN_and_PCA_for_recommendation_system
 
+Dual Layer Neural Nets for Recommendation engines given limitation of small training data.
 
-## Download the Data
+# Lesson 1:
 
-MovieLens DataSet:  https://grouplens.org/datasets/movielens/
+### ipynb notebook flattened to PDF:
 
-## Data has been downloaded here as:
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson1_keras_2_layer_alg.pdf
+
+# Reproduction of Lesson1 work:
+
+Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
+
+## Data has been downloaded in this git repo as:
 
     ratings.csv
     users.csv
     items.csv
 
-## Reproduction of verk:
+## Code is reproduction of work:
 
     #!/usr/bin/python
     # -*- coding: utf-8 -*-
@@ -61,7 +68,7 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 ![Alt text](./saddle.png?raw=true "saddle 3d shape to be learned")
 
-# The above saddle is the target, now train the model to learn it:
+# The above saddle is the arbitrary target Z, train the model to learn it:
 
     #Using Deep Learning
     #Step 0: Load Libraries
@@ -142,7 +149,6 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
     chart = layers.facet(column='metrics:N', data=df).resolve_scale(y='independent')
     chart.save('eval_model_performance.png')
 
-
 ![Alt text](./eval_model_performance.png?raw=true "training progress")
 
     #Step 5: Make a Prediction
@@ -164,11 +170,13 @@ MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 
 
-## PDF Hardcopies:
 
-### Lesson 1:
+# Tensorflow Tutorial basic Text Classification:
 
-https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson1_keras_2_layer_alg.pdf
+### ipynb notebook flattened to PDF:
+
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/tensorflow_tutorial_basic_text_classification.pdf
+
 
 
 ### Lesson 2:

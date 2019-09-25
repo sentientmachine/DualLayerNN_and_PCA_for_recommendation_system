@@ -20,5 +20,6 @@
 
 #then:
 
-python lesson1.py
+#python lesson1.py
+python lesson2.py
 
