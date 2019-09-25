@@ -15,11 +15,16 @@
 #pip3 install pydot
 #pip3 install selenium
 #pip3 install chromedriver
+#pip3 install Pillow
 #brew cask install chromedriver
 
+#pip3 install graphviz
+#brew install graphviz
 
 #then:
 
 #python lesson1.py
-python lesson2.py
+#python lesson2.py
+
+python lesson4.py
 
