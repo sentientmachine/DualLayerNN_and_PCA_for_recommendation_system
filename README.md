@@ -178,12 +178,22 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/tensorflow_tutorial_basic_text_classification.pdf
 
 
+# Day2 Lesson 4 deep models for ranking
 
-### Lesson 2:
+### ipynb notebook flattened to PDF:
+
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/day2_lesson4_deepmodels_ranking.pdf
+
+# Reproduction
+
+    code
+
+
+# Lesson 2:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_matrix_pca_reduction.pdf
 
-### Lesson 3:
+# Lesson 3:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson3_matrix_reduction_and_predict.pdf
 
