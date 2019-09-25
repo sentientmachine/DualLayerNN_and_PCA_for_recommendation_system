@@ -378,7 +378,7 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
     ncf = NeuralCollaborativeFiltering(n_users, n_items, n_factors, min_rating, max_rating)
     plot_model(ncf, show_layer_names=True, show_shapes=True)
 
-# Top K ranking
+# Top K ranking for all our Users:
 
 ![Alt text](./lesson4_titles_deepmodels.png?raw=true "Top K items")
 
