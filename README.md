@@ -170,7 +170,9 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
 ![Alt text](./saddle_learned.png?raw=true "learned saddle 3d shape")
 
+# Day 1 Lesson 2 doing PCA as matrix factorization to generalize
 
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_pca_matrix_factorization.pdf
 
 
 # Tensorflow Tutorial basic Text Classification:
@@ -178,6 +180,8 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 ### ipynb notebook flattened to PDF:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/tensorflow_tutorial_basic_text_classification.pdf
+
+
 
 
 # Day2 Lesson 4 deep models for ranking
