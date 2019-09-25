@@ -392,6 +392,10 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson3_matrix_reduction_and_predict.pdf
 
+# Lesson 4:
+
+https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson4_deepmodels_eric.pdf
+
 # Lesson 6:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson6_implicit-feedback.pdf
