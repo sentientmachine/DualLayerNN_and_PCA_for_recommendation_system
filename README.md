@@ -152,6 +152,11 @@ X and Y are the input training, and Z is the prediction, the result of the Z sad
     chart = layers.facet(column='metrics:N', data=df).resolve_scale(y='independent')
     chart.save('eval_model_performance.png')
 
+The algorithm splits the X and Y into training and testing sets and trains upon the
+training set and decreases the error between the predicted target and the correct
+target.  The model learns the training data immediately, and slowly gets closer to
+perfection in the testing data.
+
 ![Alt text](./eval_model_performance.png?raw=true "training progress")
 
     #Step 5: Make a Prediction
@@ -168,8 +173,8 @@ X and Y are the input training, and Z is the prediction, the result of the Z sad
     #save out the image
     plt.savefig('saddle_learned.png')
 
-![Alt text](./saddle_learned.png?raw=true "learned saddle 3d shape")
 
+![Alt text](./saddle_learned.png?raw=true "learned saddle 3d shape")
 
 
 # Moneyshot
