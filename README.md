@@ -120,7 +120,6 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
 
     input_x.shape, input_y.shape, output_z.shape
 
-
     df = pd.DataFrame({"X": input_x, "Y": input_y, "Z": output_z})
     df.head()
 
@@ -167,8 +166,49 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
     #save out the image
     plt.savefig('saddle_learned.png')
 
-
 ![Alt text](./saddle_learned.png?raw=true "learned saddle 3d shape")
+
+
+
+# Moneyshot
+
+The previous image shows that the dual layer neural network has correctly reproduced
+the prediction Z axis from every input X/Y.  But if you can read the code, you would
+protest we could have achieved the same objective with a one to one hashmap! 
+But to that we say hashmaps don't generalize, so lets show you how ours generalizes.
+
+    #Step 5b: Make a Prediction out of band, how are we looking?
+
+    #create some ranges of data for X and Y across 2 dimensions
+    x = np.arange(start = -2, stop = 2, step = 0.02)
+    y = np.arange(-2, 2, 0.02)
+
+    #Make a meshgrid that creates a 2d plane with it.
+    X, Y = np.meshgrid(x,y)
+
+    input_x = X.reshape(-1)
+    input_y = Y.reshape(-1)
+
+    Z_pred = model.predict([input_x, input_y]).reshape(200,200)
+
+    #prepare and save the image
+    fig = plt.figure(figsize=(8,8))
+    ax = fig.add_subplot(111, projection='3d')
+    ax.plot_surface(X, Y, Z_pred, color='y')
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z_pred')
+
+    #save out the image
+    plt.savefig('saddle_learned_out_of_band.png')
+
+
+![Alt text](./saddle_learned_out_of_band.png?raw=true "learned saddle 3d shape")
+
+Notice the X and Y axis has been increased out of the training band from -2 to 2, rather
+than just the training data -1 to 1.  This provides some evidence that our model is correctly 
+flinging the generalized projection area into visably pleasing directions. 
+
 
 # Day 1 Lesson 1 - doing PCA Principal Components Analysis via matrix factorization to maximize variance and minimize set size, for generalization.
 
@@ -407,8 +447,6 @@ https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system
 # Matrix Factorization teacher's ipynb flattened to PDF:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day2_lesson7_matrix_factorization.pdf
-
-    code
 
 Explore these:
 

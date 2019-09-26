@@ -139,6 +139,30 @@ ax.set_zlabel('Z_pred')
 plt.savefig('saddle_learned.png')
 
 
+#Step 5b: Make a Prediction out of band, how are we looking?
+
+#create some ranges of data for X and Y across 2 dimensions
+x = np.arange(start = -2, stop = 2, step = 0.02)
+y = np.arange(-2, 2, 0.02)
+
+#Make a meshgrid that creates a 2d plane with it.
+X, Y = np.meshgrid(x,y)
+
+input_x = X.reshape(-1)
+input_y = Y.reshape(-1)
+
+Z_pred = model.predict([input_x, input_y]).reshape(200,200)
+
+#prepare and save the image
+fig = plt.figure(figsize=(8,8))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, Y, Z_pred, color='y')
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z_pred')
+
+#save out the image
+plt.savefig('saddle_learned_out_of_band.png')
 
 #Step 6: Keep going
 #Experimentation
