@@ -210,6 +210,13 @@ than just the training data -1 to 1.  This provides some evidence that our model
 flinging the generalized projection area into visably pleasing directions. 
 
 
+Here they are side by side:
+
+![Alt text](./saddle.png?raw=true "training data")
+![Alt text](./saddle_learned.png?raw=true "learned")
+![Alt text](./saddle_learned_out_of_band.png?raw=true "project out of training band")
+
+
 # Day 1 Lesson 1 - doing PCA Principal Components Analysis via matrix factorization to maximize variance and minimize set size, for generalization.
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_pca_matrix_factorization.pdf
