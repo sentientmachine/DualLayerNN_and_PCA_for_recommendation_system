@@ -18,6 +18,47 @@ ratings = pd.read_csv("ratings.csv")
 users = pd.read_csv("users.csv")
 items = pd.read_csv("items.csv")
 
+#Cheeky guys trying to hide their secret encoding sauce behind recoflow?  Not on my watch.
+from sklearn.preprocessing import LabelEncoder
+def EncodeUserItem(df, user_col, item_col, rating_col, time_col):
+    """
+    Function to encode users and items
+
+    Params:
+        df (pd.DataFrame): Pandas data frame to be used.
+        user_col (string): Name of the user column.
+        item_col (string): Name of the item column.
+        rating_col (string): Name of the rating column.
+        timestamp_col (string): Name of the timestamp column.
+
+    Returns:
+        encoded_df (pd.DataFrame): Modifed dataframe with the users and items index
+        n_users (int): number of users
+        n_items (int): number of items
+        user_encoder (sklearn.LabelEncoder): Encoder for users.
+        item_encoder (sklearn.LabelEncoder): Encoder for items.
+    """
+
+    interaction = df.copy()
+
+    user_encoder = LabelEncoder()
+    user_encoder.fit(interaction[user_col].values)
+    n_users = len(user_encoder.classes_)
+
+    item_encoder = LabelEncoder()
+    item_encoder.fit(interaction[item_col].values)
+    n_items = len(item_encoder.classes_)
+
+    interaction["USER"] = user_encoder.transform(interaction[user_col])
+    interaction["ITEM"] = item_encoder.transform(interaction[item_col])
+
+    interaction.rename({rating_col: "RATING", time_col: "TIMESTAMP"}, axis=1, inplace=True)
+
+    print("Number of users: ", n_users)
+    print("Number of items: ", n_items)
+
+    return interaction, n_users, n_items, user_encoder, item_encoder
+
 
 # Encoding the data
 interaction, n_users, n_items, user_encoder, item_encoder = EncodeUserItem(ratings,
