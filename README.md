@@ -68,9 +68,11 @@ Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
     #save out the image
     plt.savefig('saddle.png')
 
+X and Y are the input training, and Z is the prediction, the result of the Z saddle function.
+
 ![Alt text](./saddle.png?raw=true "saddle 3d shape to be learned")
 
-# The above saddle is the arbitrary target Z, train the model to learn it:
+# The above saddle is an arbitrary target Z, train the model to learn it:
 
     #Using Deep Learning
     #Step 0: Load Libraries
