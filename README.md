@@ -1,43 +1,41 @@
-# DualLayerNN_and_PCA_for_recommendation_system
+# Dual Layer Neural network and PCA optimized for a ranking engine.
 
-Dual Layer Neural Nets for Recommendation engines given limitation of small training data.
+2 Layer Neural network using keras and python for a recommendation engine.
 
-# Lesson 1:
-
-### ipynb notebook flattened to PDF:
+# Lesson 1, ipynb notebook, flattened to PDF:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson1_keras_2_layer_alg.pdf
 
-# Reproduction of Lesson1 work:
+## Reproduction of Lesson1's work:
 
-Learn a Noisy Saddle Function => `z=2*x*x-3*y*y+5+e`
+To prove that our machine learning engine is working, Demo of learning a Noisy Saddle 
+Function => `z=2*x*x-3*y*y+5+e`
 
-Download MovieLens DataSet:  https://grouplens.org/datasets/movielens/
+Dataset is MovieLens DataSet:  https://grouplens.org/datasets/movielens
 
-## Data has been downloaded in this git repo as:
+## MovieLens data has been downloaded in this git repo:
 
     ratings.csv
     users.csv
     items.csv
 
-## Code is reproduction of work:
+## Python code reproduces the work:
 
     #!/usr/bin/python
     # -*- coding: utf-8 -*-
 
     #Basics of Deep Learning
-    #Learn a Saddle function Z as follows:
-    #Z = 2X^2 - 3Y^2 + 1 + error
 
     #Load Libraries
     import numpy as np
     import pandas as pd
 
-    # Visualisation
+    #Load libraries for Visualisation.
     import matplotlib.pyplot as plt
     import altair as alt
 
-    #disable warnings for tensorflow
+    #disable warnings for tensorflow, and add library tensorflow, 
+    #tensorflow is still early-alpha-software and a big crybaby
     import warnings
     warnings.filterwarnings('ignore')
     import tensorflow as tf
