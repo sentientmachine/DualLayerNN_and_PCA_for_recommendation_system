@@ -1,5 +1,6 @@
 # Dual Layer Neural network and PCA optimized for a ranking engine.
 
+
 2 Layer Neural network using keras and python for a recommendation engine.
 
 # Lesson 1, ipynb notebook, flattened to PDF:
