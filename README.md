@@ -223,7 +223,7 @@ The three side by side:
 
 https://github.com/sentientmachine/DualLayerNN_and_PCA_for_recommendation_system/blob/master/Day1_lesson2_pca_matrix_factorization.pdf
 
-![Alt text](./pca_compression_by_matrix_factorization.png?raw=true "Vertical and horizontal slice is the two factors of the original matrix.  This is the pca reduction brain.")
+![Alt text](./pca_summary.png?raw=true "Principal components analysis")
 
 
 # Tensorflow Tutorial basic Text Classification:
